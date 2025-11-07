@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>যোগাযোগ করুন — Vixen Cyber Craft</title>
+  <meta name="description" content="Vixen Cyber Craft এর সাথে যোগাযোগ করুন। আমাদের কোর্স, সময়সূচি এবং ভর্তির প্রক্রিয়া সম্পর্কে জানুন।" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="grid-bg"></div>
+  <header>
+    <div class="nav">
+      <a href="index.html" class="brand" aria-label="Vixen Cyber Craft Home">
+        <img src="https://i.postimg.cc/CLMKhrVb/VIXEN-LOGO.png" alt="My Logo" style="height: 50px; margin-right: 10px;">
+        <h1>Vixen Cyber Craft</h1>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="courses.html">Courses</a>
+        <a href="career.html">Career</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="btn theme-toggle" id="themeToggle" aria-label="Toggle Neon Theme">🔁 Theme</button>
+    </div>
+  </header>
+
+  <section id="contact" class="container" style="padding-top: 60px; min-height: 80vh;">
+    <h3 class="section-title">আমাদের সাথে যোগাযোগ করুন 📩</h3>
+    <p class="subtitle">আমাদের কোর্স, সময়সূচি এবং ভর্তির প্রক্রিয়া সম্পর্কে আরও জানতে যোগাযোগ করুন।</p>
+    <form id="contact-form" class="card">
+        <div style="display:grid; gap:12px; grid-template-columns: 1fr 1fr;">
+          <label>নাম<br>
+            <input required name="name" placeholder="আপনার পুরো নাম" style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(59,130,246,.35); background:#050a0f; color:var(--text)">
+          </label>
+          <label>মোবাইল নাম্বার<br>
+            <input required name="number" placeholder="আপনার মোবাইল নাম্বার" style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(59,130,246,.35); background:#050a0f; color:var(--text)">
+          </label>
+          <label>ই-মেইল<br>
+            <input type="email" required name="email" placeholder="name@email.com" style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(59,130,246,.35); background:#050a0f; color:var(--text)">
+          </label>
+           <label>ঠিকানা<br>
+            <input name="address" placeholder="আপনার বর্তমান ঠিকানা" style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(59,130,246,.35); background:#050a0f; color:var(--text)">
+          </label>
+        </div>
+        <label style="display:block; margin-top:12px;">বার্তা<br>
+          <textarea required rows="4" name="message" placeholder="আপনার বার্তা লিখুন...." style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(59,130,246,.35); background:#050a0f; color:var(--text)"></textarea>
+        </label>
+        <div class="cta"><button class="btn" type="submit">📩 বার্তা পাঠান</button></div>
+    </form>
+  </section>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    // এই কী-টি আপনার নিজের EmailJS পাবলিক কী দিয়ে প্রতিস্থাপন করুন!
+    emailjs.init("1VFNiDDVjSlGcF53p"); 
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // normal form submit 
+
+      emailjs.sendForm('vixen_cyber_craft', 'vixen_template', this)
+        .then(function(){
+          alert('আপনার বার্তা সফলভাবে পাঠানো হয়েছে! ✅');
+          document.getElementById('contact-form').reset();
+        }, function(error){
+          alert('বার্তা পাঠাতে ব্যর্থ হয়েছে ❌', error);
+          console.error(error);
+        });
+    });
+  </script>
+
+  <footer class="container">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between;">
+      <small>© <span id="year"></span> Vixen Cyber Craft — সর্বস্বত্ব সংরক্ষিত।</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>কোর্সসমূহ — Vixen Cyber Craft</title>
+  <meta name="description" content="Vixen Cyber Craft-এর সমস্ত জনপ্রিয় সাইবার সিকিউরিটি ও এথিক্যাল হ্যাকিং কোর্স মডিউলগুলো দেখুন।" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="grid-bg"></div>
+  <header>
+    <div class="nav">
+      <a href="index.html" class="brand" aria-label="Vixen Cyber Craft Home">
+        <img src="https://i.postimg.cc/CLMKhrVb/VIXEN-LOGO.png" alt="My Logo" style="height: 50px; margin-right: 10px;">
+        <h1>Vixen Cyber Craft</h1>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="courses.html">Courses</a>
+        <a href="career.html">Career</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="btn theme-toggle" id="themeToggle" aria-label="Toggle Neon Theme">🔁 Theme</button>
+    </div>
+  </header>
+
+  <section id="courses-full" class="container" style="padding-top: 60px;">
+    <h3 class="section-title">আমাদের অ্যাডভান্সড কোর্সসমূহ 📚</h3>
+    <p class="subtitle">জিরো থেকে প্রো—বাস্তব জগতের আক্রমণ ও প্রতিরক্ষার কৌশল শিখুন।</p>
+    
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div class="card">
+            <span class="badge">মডিউল ১</span>
+            <h4 style="color:var(--neon2);">এথিক্যাল হ্যাকিং ফাউন্ডেশন</h4>
+            <p>লিনাক্স বেসিকস, অ্যাডভান্সড নেটওয়ার্কিং, রিকন (Recon), এবং এক্সপ্লয়টেশন-এর প্রাথমিক ধারণা।</p>
+            <ul>
+                <li>নেটওয়ার্ক টপোলজি ও ট্রাফিক অ্যানালাইসিস</li>
+                <li>কালি লিনাক্স এনভায়রনমেন্ট সেটআপ</li>
+                <li>বেসিক এক্সপ্লয়টেশন এবং প্যাচিং</li>
+            </ul>
+            <a class="btn" href="contact.html">বিস্তারিত জানুন</a>
+        </div>
+        
+        <div class="card">
+            <span class="badge" style="background: rgba(59,130,246,.12); border: 1px solid rgba(59,130,246,.35); color: #85b0ff;">মডিউল ২</span>
+            <h4 style="color:var(--neon3);">ওয়েব অ্যাপ্লিকেশন পেনিট্রেশন টেস্টিং</h4>
+            <p>OWASP Top 10 ভালনারেবিলিটিজ, Burp Suite-এর ব্যবহার, এবং Bug Bounty হান্টিং টেকনিক।</p>
+            <ul>
+                <li>SQL Injection, XSS, CSRF প্র্যাকটিস</li>
+                <li>API সিকিউরিটি টেস্টিং</li>
+                <li>পেশাদার বাগ রিপোর্ট লেখা</li>
+            </ul>
+            <a class="btn" href="contact.html">ভর্তির জন্য যোগাযোগ</a>
+        </div>
+        
+        <div class="card">
+            <span class="badge" style="background: rgba(255,0,255,.12); border: 1px solid rgba(255,0,255,.35); color: #ff85ff;">মডিউল ৩</span>
+            <h4 style="color:var(--accent);">অ্যাডভান্সড রেড টিম অপারেশনস</h4>
+            <p>OPSEC, অ্যাডভার্সারি এমুলেশন, ইনশিয়াল এক্সেস, ল্যাটারাল মুভমেন্ট এবং C2 ফ্রেমওয়ার্ক।</p>
+            <ul>
+                <li>উন্নত ফায়ারওয়াল বাইপাস কৌশল</li>
+                <li>C2 (Command and Control) ফ্রেমওয়ার্ক ব্যবহার</li>
+                <li>ক্রিটিক্যাল সিস্টেম টেস্টিং</li>
+            </ul>
+            <a class="btn" href="contact.html">প্রিমিয়াম এনরোলমেন্ট</a>
+        </div>
+        
+        <section id="lab-details" class="container" style="grid-column: 1 / -1; margin-top: 30px; padding: 0;">
+            <h3 class="section-title" style="margin-top: 20px;">ল্যাবস ও প্র্যাকটিস এনভায়রনমেন্ট 🧪</h3>
+            <p class="subtitle">ব্রাউজার-ভিত্তিক অনলাইন ল্যাব, কোনো সেটআপের ঝামেলা নেই।</p>
+            <div class="grid">
+              <div class="card"><h4>ওয়েব ভালনারেবিলিটি ল্যাব</h4><p>SQLi, XSS, XSRF, LFI, RCE - সহ সব ধরনের ওয়েব অ্যাটাক।</p></div>
+              <div class="card"><h4>অ্যাডভান্সড নেটওয়ার্কিং</h4><p>Wireshark, Nmap, Netcat, Metasploit ব্যবহার করে অ্যাডভান্সড টেস্টিং।</p></div>
+              <div class="card"><h4>ক্লাউড থ্রেটস</h4><p>AWS/IAM মিসকনফিগারেশন, S3 এক্সপোজার, কন্টেইনার এস্কেপ।</p></div>
+            </div>
+        </section>
+        
+    </div>
+  </section>
+
+  <footer class="container">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between;">
+      <small>© <span id="year"></span> Vixen Cyber Craft — সর্বস্বত্ব সংরক্ষিত।</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+backend:
+  # Netlify CMS use korte hole Git Gateway must. Manual Deploy (Drag and Drop)-e kaj korbena.
+  name: git-gateway
+  branch: main # Apnar Git Repository-r main branch-er naam (beshirbhag somoy 'main' ba 'master' hoy)
+
+# Netlify Identity ebong Git Gateway authentication-er jonno ei duto URL dorkar
+auth_url: https://your-site-name.netlify.app/.netlify/identity/authenticate
+base_url: https://api.netlify.com
+
+# Media settings
+media_folder: "assets/images" 
+public_folder: "/assets/images" 
+
+# Collections (Je content gulo change kora jabe)
+collections:
+  - name: "home_page"
+    label: "হোম পেজের টেক্সট"
+    files:
+      - label: "হিরো এবং বৈশিষ্ট্য"
+        name: "data_home"
+        file: "data/home.json" # Content file location
+        fields:
+          - {label: "Hero সাবটাইটেল", name: "hero_subtitle", widget: "string", default: "Vixen Cyber Craft: ভবিষ্যতের সাইবার নিনজাদের জন্য পেশাদার প্রশিক্ষণ কেন্দ্র।"}
+          - {label: "প্রথম কোর্সের নাম", name: "course_1_title", widget: "string", default: "Ethical Hacking Foundation"}
+          - {label: "প্রথম কোর্সের বিবরণ", name: "course_1_desc", widget: "text"}
+          - {label: "কেন আমরা (Why Us) সাবটাইটেল", name: "why_us_subtitle", widget: "string"}
+          - {label: "যোগাযোগের ট্যাগলাইন", name: "contact_cta", widget: "string"}
